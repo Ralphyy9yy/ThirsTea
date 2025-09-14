@@ -39,18 +39,6 @@ http://localhost/thirstea/public/html/1st.html
 - Backend PHP scripts handle order processing and data management.
 - Styles and JavaScript enhance user experience and responsiveness.
 
-## Project Structure
-thirstea/
-├── backend/ # PHP backend scripts
-├── public/
-│ ├── css/ # Stylesheets
-│ ├── html/ # HTML pages including landing page
-│ ├── images/ # Image assets (logo, favicon)
-│ ├── js/ # Client-side JavaScript
-│ └── uploads/ # Uploaded files storage
-├── .git/ # Git version control
-└── index.php # Main PHP entry point (optional)
-
 
 ## Contribution
 
