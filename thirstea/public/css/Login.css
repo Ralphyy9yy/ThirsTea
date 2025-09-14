@@ -1,0 +1,217 @@
+/* Import Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('../images/tbg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5;
+    position: relative;
+    animation: fadeInBackground 2s ease forwards;
+}
+
+.logo {
+    position: fixed;
+    /* Fix logo to left side of viewport */
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 80px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    animation: bounce 3s ease-in-out infinite;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+    animation: bounce 3s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-left: 120px;
+    animation: fadeInBackground 3s ease forwards;
+}
+
+
+/* rest of your styles remain the same */
+
+.login-box {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.login-box:hover {
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.18);
+}
+
+.login-box h2 {
+    margin-bottom: 30px;
+    color: #222;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #00c36e;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 195, 110, 0.4);
+}
+
+.login-btn {
+    background-color: #00c36e;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-btn:hover,
+.login-btn:focus {
+    background-color: #00b35a;
+    box-shadow: 0 6px 12px rgba(0, 195, 110, 0.4);
+    outline: none;
+}
+
+.register-link {
+    margin-top: 20px;
+    color: #555;
+    font-size: 14px;
+}
+
+.register-link a {
+    color: #ffc107;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.register-link a:hover,
+.register-link a:focus {
+    color: #e6ac00;
+    text-decoration: underline;
+    outline: none;
+}
+
+.home-button {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    padding: 12px 24px;
+    border-radius: 30px;
+    background-color: rgba(55, 200, 137, 0.8);
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(98, 244, 219, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.home-button:hover,
+.home-button:focus {
+    background-color: #0056b3;
+    box-shadow: 0 8px 16px rgba(0, 86, 179, 0.5);
+    outline: none;
+}
+
+a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+    color: #00c36e;
+    text-decoration: underline;
+    outline: none;
+}
+
+
+/* Responsive adjustments */
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 90%;
+        padding: 0 10px;
+    }
+    .login-box {
+        padding: 30px 20px;
+    }
+    .login-box h2 {
+        font-size: 24px;
+    }
+    .login-btn {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+    .home-button {
+        padding: 10px 20px;
+        font-size: 14px;
+        top: 15px;
+        right: 15px;
+    }
+}

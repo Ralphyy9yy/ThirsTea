@@ -1,0 +1,133 @@
+/* Basic reset */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #004d40;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+header .logo {
+    height: 50px;
+}
+
+.add-menu-container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+}
+
+.add-menu-container h1 {
+    margin-bottom: 25px;
+    color: #004d40;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #004d40;
+}
+
+
+/* Inputs, textarea, file input */
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea,
+.form-group input[type="file"],
+.form-group select {
+    /* Added select here */
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    appearance: none;
+    /* Remove default arrow for consistent styling */
+    background-color: white;
+}
+
+
+/* Focus styles */
+
+.form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus,
+.form-group textarea:focus,
+.form-group input[type="file"]:focus,
+.form-group select:focus {
+    /* Added select here */
+    border-color: #00796b;
+    outline: none;
+}
+
+
+/* Textarea specific */
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+
+/* Dropdown arrow styling */
+
+.form-group select {
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='14' height='10' viewBox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%23797979' stroke-width='2' fill='none' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 14px 10px;
+    padding-right: 36px;
+    /* Space for arrow */
+}
+
+
+/* Button styling */
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    padding: 14px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #004d40;
+}
+
+
+/* Responsive */
+
+@media (max-width: 640px) {
+    .add-menu-container {
+        margin: 20px;
+        padding: 20px;
+    }
+}

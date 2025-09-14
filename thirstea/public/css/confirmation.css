@@ -1,0 +1,85 @@
+/* order-confirmation.css */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    color: #333;
+  }
+  
+  .confirmation-container {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    max-width: 450px;
+    width: 100%;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .confirmation-icon {
+    font-size: 60px;
+    color: #28a745;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+  
+  p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  .order-total {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #222;
+  }
+  
+  .btn-home {
+    background-color: #007bff;
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-home:hover,
+  .btn-home:focus {
+    background-color: #0056b3;
+    outline: none;
+  }
+  
+  @media (max-width: 480px) {
+    .confirmation-container {
+      padding: 30px 20px;
+    }
+    h1 {
+      font-size: 1.5rem;
+    }
+    .confirmation-icon {
+      font-size: 48px;
+    }
+  }
+  

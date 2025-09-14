@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('bground.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    width: 60px; /* Adjust size as needed */
+  }
+  
+  .logout-btn {
+    background-color: #8B0000; /* Dark red */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .logout-btn:hover {
+    background-color: #A52A2A; /* Slightly lighter red for hover effect */
+  }
+  
+  .content h1 {
+    font-size: 2.5em;
+    margin-top: 50px; /* Add spacing from header */
+  }
+  
+  .content p {
+    font-size: 1.2em;
+  }
+  
+  .footer {
+    margin-top: 50px; /* Add spacing between content and footer */
+  }
+  
+  .nav-btn {
+    background-color: #FFD700; /* Gold color */
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px; /* Space between buttons */
+    border-radius: 20px; /* Rounded corners */
+    font-size: 16px; /* Make text larger */
+    cursor: pointer;
+  }
+  
+  .nav-btn:hover {
+    background-color: #FFC107; /* Slightly darker gold for hover effect */
+  }
+  

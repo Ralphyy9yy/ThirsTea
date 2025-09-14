@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/Dashboard.css" />
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" role="navigation" aria-label="Main navigation">
+            <img src="../images/Tlogo.png" alt="Thirstea Logo" class="logo" />
+            <nav class="menu">
+                <ul>
+                    <li class="active"><a href="#" aria-current="page">Dashboard</a></li>
+                    <li><a href="../html/Order.html">Orders</a></li>
+                    <li><a href="../html/User.html">Couriers</a></li>
+                    <li><a href= "../html/customer.html">Customers</a></li>
+                    <li><a href="../html/Menu.html">Menu</a></li>
+                    <li><a href="../html/Messages.html">Messages</a></li>
+                    <li><a href="../html/Transactions.html">Transaction History</a></li>
+                    <li><a href="../html/1st.html">Log Out</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content" role="main">
+            <h1>Dashboard</h1>
+            <section class="stats-container" aria-label="Dashboard statistics">
+                <div class="stat-box">
+                    <p>Total Orders</p>
+                    <h2 id="total-orders">Loading...</h2>
+                </div>
+                <div class="stat-box">
+                    <p>Total Revenue</p>
+                    <h2 id="total-revenue">Loading...</h2>
+                </div>
+                <div class="stat-box">
+                    <p>Active Couriers</p>
+                    <h2 id="active-couriers">Loading...</h2>
+                </div>
+                <div class="stat-box">
+                    <p>Pending Deliveries</p>
+                    <h2 id="pending-deliveries">Loading...</h2>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../js/dashboard.js"></script>
+</body>
+
+</html>

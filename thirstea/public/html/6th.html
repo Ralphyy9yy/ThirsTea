@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Menu</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/Tlogo.png" alt="Starfleet Logo" />
+        </div>
+
+        <button 
+            class="hamburger" 
+            id="hamburger" 
+            aria-label="Toggle navigation menu" 
+            aria-expanded="false" 
+            aria-controls="navMenu"
+            type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        
+        
+
+        <nav class="header-nav" id="navMenu" role="navigation" aria-label="Primary navigation">
+            <a href="../html/Cart.html" class="cart-icon" aria-label="View cart">🛒</a>
+          
+            <!-- Profile Icon and Dropdown -->
+            <div class="user-profile" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="User menu" style="display: inline-block; position: relative; margin-left: 1rem;">
+              <i class="fas fa-user-circle profile-logo" aria-hidden="true" style="font-size: 1.8rem; color: #28a745; cursor: pointer;"></i>
+              <ul class="profile-dropdown" role="menu" aria-hidden="true" style="position: absolute; top: 40px; right: 0; background: white; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.13); list-style: none; padding: 8px 0; margin: 0; width: 180px; display: none; z-index: 1000;">
+                <li role="none"><a href="../html/recent-orders.html" role="menuitem" tabindex="-1" style="display: block; padding: 10px 20px; color: #343a40; text-decoration: none;">Recent Orders</a></li>
+                <li role="none"><a href="../html/5th.html" role="menuitem" tabindex="-1" style="display: block; padding: 10px 20px; color: #343a40; text-decoration: none;">Help</a></li>
+                <li role="none"><a href="../html/3rd.html" id="login-link" role="menuitem" tabindex="-1" style="display:none; padding: 10px 20px; color: #343a40; text-decoration: none;">Login</a></li>
+                <li role="none"><button id="logout-btn" role="menuitem" tabindex="-1" type="button" style="display:none; width: 100%; padding: 10px 20px; background: none; border: none; right: 20px; color: #343a40; text-align: center; cursor: pointer;">Logout</button></li>
+              </ul>
+            </div>
+          </nav>
+          
+    </header>
+
+    <main>
+        <section class="categories" aria-label="Product categories">
+            <h2>Categories</h2>
+
+            <!-- Snacks Section -->
+            <div class="category snacks" aria-label="Snacks category">
+                <h3>Snacks</h3>
+                <div class="items-grid" id="snacks-container" aria-live="polite">
+                    <!-- Snack items will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Drinks Section -->
+            <div class="category drinks" aria-label="Drinks category">
+                <h3>Drinks</h3>
+                <div class="items-grid" id="drinks-container" aria-live="polite">
+                    <!-- Drink items will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer content here -->
+    </footer>
+
+    <script src="../js/home.js"></script>
+   
+</body>
+
+</html>

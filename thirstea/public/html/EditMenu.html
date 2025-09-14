@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Edit Menu Item</title>
+    <link rel="stylesheet" href="../css/EditMenu.css" />
+</head>
+
+<body>
+    <header>
+        <img src="../images/Tlogo.png" alt="ThirsTea Logo" class="logo" />
+    </header>
+
+    <div class="add-menu-container">
+        <h1>Edit Menu Item</h1>
+        <form id="editMenuForm" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="itemName">Item Name</label>
+                <input type="text" id="itemName" name="itemName" required />
+            </div>
+
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select id="category" name="category" required>
+          <option value="" disabled>Select category</option>
+          <option value="Drinks">Drinks</option>
+          <option value="Snacks">Snacks</option>
+        </select>
+            </div>
+
+            <div class="form-group">
+                <label for="itemPrice">Price (₱)</label>
+                <input type="number" id="itemPrice" name="itemPrice" step="0.01" min="0" required />
+            </div>
+
+            <div class="form-group">
+                <label for="currentImage">Current Image</label>
+                <div id="currentImageContainer">
+                    <!-- Current image will be shown here -->
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="itemImage">Change Image (optional)</label>
+                <input type="file" id="itemImage" name="itemImage" accept="image/*" />
+            </div>
+
+            <button type="submit">Update Menu Item</button>
+            <button type="button" id="cancelBtn" style="margin-left: 10px;">Cancel</button>
+        </form>
+    </div>
+
+    <script src="../js/EditMenu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="../css/payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <a href="../html/6th.html" class="home-button">
+                <i class="fas fa-home"></i> Home
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Customer Information Section -->
+        <section class="customer-info">
+            <h2 id="customer-name">Customer Name</h2>
+            <label for="customer-address">Address:</label>
+            <input type="text" id="customer-address" placeholder="Enter delivery address" />
+        </section>
+
+        <!-- Order Summary Section -->
+        <section class="order-summary">
+            <!-- Order items will be injected by JavaScript -->
+        </section>
+
+        <!-- Payment Method Section -->
+        <section class="payment-method">
+            <h2>Payment Method</h2>
+            <div class="payment-option">
+                <input type="radio" id="gcash" name="payment" value="gcash">
+                <label for="gcash">Gcash</label>
+            </div>
+            <div class="payment-option">
+                <input type="radio" id="cash" name="payment" value="cash">
+                <label for="cash">Cash on Delivery</label>
+            </div>
+        </section>
+
+        <button class="place-order">
+            <i class="fas fa-arrow-right"></i>
+            <span>Place Order</span>
+        </button>
+    </div>
+
+    <script src="../js/payment.js"></script>
+</body>
+
+</html>

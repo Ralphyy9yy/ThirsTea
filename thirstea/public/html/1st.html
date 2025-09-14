@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ThirsTea Landing Page</title>
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+
+
+    <div class="landing-container">
+        <header>
+            <img src="../images/Tlogo.png" alt="ThirsTea Logo" class="logo" />
+        </header>
+
+        <main id="main-content">
+            <h1>Welcome to ThirsTea!</h1>
+            <a href="#" class="order-btn">Order Now</a>
+
+            <section class="about">
+                <h2>About Us</h2>
+                <h3>Welcome to ThirsTea – Your Ultimate Destination for Delicious Food & Refreshing Drinks!</h3>
+                <p>
+                    At ThirsTea, we take pride in offering a wide variety of flavorful meals and thirst-quenching beverages to satisfy every craving. Our easy-to-use online platform lets you browse, order, and enjoy your favorite items from the comfort of your home. Once
+                    you place an order, our team gets to work preparing and delivering your food fresh and fast – right to your doorstep.
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            <p>All rights reserved 2025.</p>
+        </footer>
+    </div>
+
+
+    <div id="order-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="order-modal-title">
+
+        <div class="modal-content">
+            <button class="close-btn" aria-label="Close login/register form">&times;</button>
+            <h2 id="order-modal-title">Order Now</h2>
+            <p class="subtitle">Welcome! Please login or register to start ordering your favorite drinks and snacks.</p>
+            <div class="buttons" role="region" aria-label="User Authentication Actions">
+                <a href="../html/3rd.html"><button type="button" aria-label="Login">Login now</button></a>
+                <a href="../html/4th.html"><button type="button" aria-label="Register">Register now</button></a>
+            </div>
+            <div class="courier-button-container" role="region" aria-label="Courier Login" style="margin-top: 0px;">
+                <a href="../html/courier.html"><button type="button" aria-label="Login as Courier">Login as Courier</button></a>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const orderBtn = document.querySelector('.order-btn');
+            const modal = document.getElementById('order-modal');
+            const closeBtn = modal.querySelector('.close-btn');
+
+            orderBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.classList.remove('hidden');
+                modal.querySelector('button').focus();
+            });
+
+            closeBtn.addEventListener('click', () => {
+                modal.classList.add('hidden');
+                orderBtn.focus();
+            });
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                    orderBtn.focus();
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                    modal.classList.add('hidden');
+                    orderBtn.focus();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

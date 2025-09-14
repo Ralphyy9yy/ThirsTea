@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Courier Dashboard</title>
+  <link rel="stylesheet" href="../css/courier-dashboard.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <img src="../images/Tlogo.png" alt="ThirsTea Logo" class="sidebar-logo" />
+      <nav>
+        <ul>
+          <li><a href="#" class="active">Dashboard</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="logout" id="logoutBtn">Log Out</a>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <h1>List of Assigned Deliveries</h1>
+      <section class="table-section">
+        <h2>To deliver</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Customer</th>
+              <th>Address</th>
+              <th>Amount</th>
+              <th>Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Rows will be populated dynamically -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <!-- Link to external JS -->
+  <script src="../js/courier-dashboard.js"></script>
+
+  <script>
+    // Optional: Logout button handler
+    document.getElementById('logoutBtn').addEventListener('click', (e) => {
+      e.preventDefault();
+      // Clear session/localStorage or do logout logic here
+      alert('Logging out...');
+      // Redirect to login page or homepage
+      window.location.href = '../html/1st.html'; // Adjust URL as needed
+    });
+  </script>
+</body>
+</html>

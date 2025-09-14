@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 50px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 10px
+}
+.items-container{
+    margin-left: 20px;
+}
+
+.header {
+    background-color: #28a745;
+    /* Green color */
+    color: white;
+    text-align: center;
+    padding: 2px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.quantity {
+    background-color: #28a745;
+    /* Green color */
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.item-details {
+    flex-grow: 1;
+    margin-left: 15px;
+}
+
+.remove-button {
+    background-color: #dc3545;
+    /* Red color */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.summary {
+    padding: 20px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.checkout-button {
+    background-color: #28a745;
+    /* Green color */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.delivery-info {
+    background-color: #f0f0f0;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.delivery-icon {
+    height: 40px;
+    margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+}
+
+.checkout-section {
+    background-color: #28a745;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkout-section .back-button,
+.checkout-section .checkout-final {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkout-section .back-button:hover,
+.checkout-section .checkout-final:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quantity-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 1px 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    user-select: none;
+}
+
+.quantity-btn:hover {
+    background-color: #45a049;
+}
+
+.quantity-display {
+    min-width: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.price-display {
+    min-width: 80px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.remove-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.remove-btn:hover {
+    background-color: #c0392b;
+}

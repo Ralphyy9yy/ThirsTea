@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recent Orders</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 1rem;
+      background: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #28a745;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background-color: #28a745;
+      color: white;
+    }
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+    .no-orders, .not-logged-in {
+      text-align: center;
+      margin-top: 2rem;
+      font-style: italic;
+      color: #666;
+    }
+    .not-logged-in a {
+      color: #28a745;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .not-logged-in a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Recent Orders</h1>
+  <table aria-label="List of recent orders" id="ordersTable">
+    <thead>
+      <tr>
+        <th>Order ID</th>
+        <th>Date</th>
+        <th>Items</th>
+        <th>Total Amount</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td colspan="5" style="text-align:center;">Loading orders...</td></tr>
+    </tbody>
+  </table>
+
+  <script>
+    async function fetchRecentOrders() {
+      const tbody = document.querySelector('#ordersTable tbody');
+
+      // Check if user is logged in (adjust key and logic as per your app)
+      const user = JSON.parse(localStorage.getItem('user'));
+      if (!user || !(user.username || user.userName)) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="5" class="not-logged-in">
+              You are not logged in. Please <a href="../html/3rd.html">log in</a> to view your recent orders.
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      try {
+        // Replace with your actual API endpoint for recent orders
+        const response = await fetch('http://localhost:3000/thirstea/backend/get_recent_orders.php');
+        if (!response.ok) throw new Error('Network response was not ok');
+
+        const data = await response.json();
+        tbody.innerHTML = '';
+
+        if (!data.success || !data.orders.length) {
+          tbody.innerHTML = '<tr><td colspan="5" class="no-orders">No recent orders found.</td></tr>';
+          return;
+        }
+
+        data.orders.forEach(order => {
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td>${order.orderId}</td>
+            <td>${new Date(order.date).toLocaleDateString()}</td>
+            <td>${order.items.map(i => `${i.name} x${i.quantity}`).join(', ')}</td>
+            <td>₱${order.total.toFixed(2)}</td>
+            <td>${order.status}</td>
+          `;
+          tbody.appendChild(tr);
+        });
+      } catch (error) {
+        tbody.innerHTML = `<tr><td colspan="5" style="color:red; text-align:center;">Error loading orders.</td></tr>`;
+        console.error('Error fetching recent orders:', error);
+      }
+    }
+
+    fetchRecentOrders();
+  </script>
+</body>
+</html>

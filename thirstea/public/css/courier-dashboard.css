@@ -1,0 +1,307 @@
+/* Reset some default styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+
+/* Container layout */
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* Sidebar styles */
+
+.sidebar {
+    width: 260px;
+    background-color: #93b5d1e9;
+    /* dark blue-gray */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: fixed;
+    height: 100vh;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-logo {
+    width: 150px;
+    margin-bottom: 40px;
+    align-self: center;
+}
+
+.sidebar nav ul {
+    list-style: none;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav ul li a.active,
+.sidebar nav ul li a:hover {
+    background-color: #3b82f6;
+    /* blue */
+    color: #fff;
+}
+
+.logout {
+    margin-top: auto;
+    padding: 12px 15px;
+    background-color: #ef4444;
+    /* red */
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.logout:hover {
+    background-color: #b91c1c;
+    /* darker red */
+}
+
+
+/* Main content */
+
+.main-content {
+    margin-left: 260px;
+    padding: 40px 60px;
+    flex-grow: 1;
+    background-color: #f5f7fa;
+    min-height: 100vh;
+}
+
+.main-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+
+/* Table section */
+
+.table-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #334155;
+    font-weight: 600;
+}
+
+
+/* Table styles */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #3b82f6;
+    /* blue */
+    color: #fff;
+}
+
+thead th {
+    padding: 15px 20px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: #f0f9ff;
+}
+
+tbody td {
+    padding: 15px 20px;
+    vertical-align: middle;
+    font-size: 1rem;
+    color: #475569;
+}
+select {
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  select:disabled {
+    background-color: #eee;
+    cursor: not-allowed;
+  }
+
+
+/* Status badge */
+
+.status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2563eb;
+    background-color: #dbeafe;
+    margin-right: 10px;
+    min-width: 110px;
+    text-align: center;
+}
+
+
+/* Delivered status style */
+
+.status.delivered-status {
+    color: #16a34a;
+    background-color: #dcfce7;
+}
+
+
+/* Delivered button */
+
+.delivered-btn {
+    padding: 8px 18px;
+    background-color: #2563eb;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+.delivered-btn:hover:not(:disabled) {
+    background-color: #1e40af;
+}
+
+.delivered-btn:disabled {
+    background-color: #94a3b8;
+    cursor: default;
+}
+
+
+/* Responsive adjustments */
+
+@media (max-width: 900px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    .sidebar-logo {
+        width: 120px;
+        margin-bottom: 0;
+    }
+    .sidebar nav ul {
+        display: flex;
+        flex-direction: row;
+        margin-left: 20px;
+    }
+    .sidebar nav ul li {
+        margin: 0 15px;
+    }
+    .logout {
+        margin-left: auto;
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    .main-content {
+        margin-left: 0;
+        padding: 20px 30px;
+    }
+    table thead {
+        display: none;
+        /* Hide table headers on small screens */
+    }
+    table,
+    tbody,
+    tr,
+    td {
+        display: block;
+        width: 100%;
+    }
+    tbody tr {
+        margin-bottom: 20px;
+        border-bottom: 2px solid #e2e8f0;
+        padding-bottom: 15px;
+    }
+    tbody td {
+        padding-left: 50%;
+        position: relative;
+        text-align: left;
+        font-size: 0.95rem;
+    }
+    tbody td::before {
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        width: 45%;
+        white-space: nowrap;
+        font-weight: 600;
+        color: #334155;
+    }
+    tbody td:nth-of-type(1)::before {
+        content: "Customer";
+    }
+    tbody td:nth-of-type(2)::before {
+        content: "Address";
+    }
+    tbody td:nth-of-type(3)::before {
+        content: "Amount";
+    }
+    tbody td:nth-of-type(4)::before {
+        content: "Date";
+    }
+    tbody td:nth-of-type(5)::before {
+        content: "Action";
+    }
+    .delivered-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

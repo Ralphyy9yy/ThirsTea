@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Add Menu</title>
+    <link rel="stylesheet" href="../css/AddMenu.css" />
+</head>
+
+<body>
+    <header>
+        <img src="../images/Tlogo.png" alt="ThirsTea Logo" class="logo" />
+    </header>
+    <div class="add-menu-container">
+        <h1>Add New Menu Item</h1>
+        <form id="menuForm" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="itemName">Item Name</label>
+                <input type="text" id="itemName" name="itemName" required />
+            </div>
+
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select id="category" name="category" required>
+                    <option value="" disabled selected>Select category</option>
+                    <option value="Drinks">Drinks</option>
+                    <option value="Snacks">Snacks</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="itemPrice">Price (₱)</label>
+                <input type="number" id="itemPrice" name="itemPrice" step="0.01" min="0" required />
+            </div>
+
+            <div class="form-group">
+                <label for="itemImage">Image</label>
+                <input type="file" id="itemImage" name="itemImage" accept="image/*" />
+            </div>
+
+            <button type="submit">Add Menu Item</button>
+        </form>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="../js/AddMenu.js"></script>
+</body>
+
+</html>

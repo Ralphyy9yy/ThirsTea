@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="../css/User.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <img src="../images/Tlogo.png" alt="Logo" class="logo">
+            <nav class="menu">
+                <ul>
+                    <li><a href="Dashboard.html">Dashboard</a></li>
+                    <li><a href="Order.html">Orders</a></li>
+                    <li class="active"><a href="#">Couriers</a></li>
+                    <li> <a href = "../html/customer.html">Customers</a></li>
+                    <li><a href="../html/Menu.html">Menu</a></li>
+                    <li><a href="../html/Messages.html">Messages</a></li>
+                    <li><a href="../html/Transactions.html">Transaction History</a></li>
+                    <li><a href="../html/1st.html">Log Out</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="header-with-button" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h1>Couriers Management</h1>
+                <a href="../html/AddCourier.html" class="add-menu-btn">+ Add a Courier</a>
+            </div>
+            <p>Manage and view all customers and couriers here.</p>
+
+            <div class="recent-orders">
+                <h2>List of Couriers</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+
+                            <th>Contact Number</th>
+                            <th>Vehicle type</th>
+
+                            <th>Vehicle License Plate</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orders-tbody">
+                        <!-- Orders will be dynamically loaded here -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../js/User.js"></script>
+</body>
+
+</html>

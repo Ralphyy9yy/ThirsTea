@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add Menu</title>
+    <link rel="stylesheet" href="../css/AddMenu.css">
+</head>
+
+<body>
+    <header>
+        <img src="../images/Tlogo.png" alt="ThirsTea Logo" class="logo">
+    </header>
+    <div class="add-menu-container">
+        <h1>Add Courier</h1>
+        <form id="addCourierForm" method="POST" action="/backend/add_courier.php">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contactNumber">Contact Number</label>
+                <input type="text" id="contactNumber" name="contactNumber" required>
+            </div>
+
+            <div class="form-group">
+                <label for="vehicleType">Vehicle Type</label>
+                <input type="text" id="vehicleType" name="vehicleType" required>
+            </div>
+
+            <div class="form-group">
+                <label for="vehicleLicensePlate">Vehicle License Plate</label>
+                <input type="text" id="vehicleLicensePlate" name="vehicleLicensePlate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="submit">Add</button>
+        </form>
+
+    </div>
+    <table>
+        <tbody id="courierTableBody"></tbody>
+    </table>
+
+
+    <!-- External JavaScript -->
+    <script src="../js/AddCourier.js"></script>
+</body>
+
+</html>

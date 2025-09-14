@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+header .home-button {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.customer-info {
+    margin-bottom: 20px;
+}
+
+.customer-info h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.customer-info input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.order-summary {
+    margin-bottom: 20px;
+}
+
+.order-summary .order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.order-summary .order-item p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.order-summary .total {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.payment-method {
+    margin-bottom: 20px;
+}
+
+.payment-method h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.payment-option {
+    margin-bottom: 10px;
+}
+
+.payment-option label {
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.payment-method input[type="radio"] {
+    margin-right: 10px;
+}
+
+.place-order {
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.place-order i {
+    margin-right: 10px;
+}
+
+.place-order:hover {
+    background-color: #218838;
+}
+
+.place-order:active {
+    background-color: #1e7e34;
+}

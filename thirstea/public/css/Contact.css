@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-image: url('../images/tbg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.home-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.logo {
+    height: 80px;
+    position: absolute;
+    top: 5px;
+    left: 20px;
+}
+
+.logo img {
+    width: 100px;
+    /* Adjust as needed */
+}
+
+.contact-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 700px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-form h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.send-button {
+    background-color: #00c36e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.send-button:hover {
+    background-color: none;
+}
+
+a {
+    color: #000000;
+}

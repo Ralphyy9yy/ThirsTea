@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../css/Login.css" />
+</head>
+
+<body>
+    <div class="home-button">
+        <a href="../html/6th.html" aria-label="Go to Home Page">Home</a>
+    </div>
+
+    <div class="container">
+        <div class="logo">
+            <img src="../images/Tlogo.png" alt="Thirstea Logo" title="Thirstea Logo" />
+        </div>
+
+        <div class="login-box">
+            <h2>Log in</h2>
+            <form id="loginForm" novalidate>
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" autocomplete="username" required aria-required="true" />
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" autocomplete="current-password" required aria-required="true" />
+                </div>
+                <button type="submit" class="login-btn" aria-label="Login now">Login now</button>
+
+                <div class="register-link">
+                    No account? <a href="../html/4th.html">Register</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/3rd.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Courier Log in</title>
+    <link rel="stylesheet" href="../css/courier.css" />
+</head>
+
+<body>
+    <div class="login-page">
+        <img src="../images/Tlogo.png" alt="ThirsTea Logo" class="logo" />
+
+        <div class="login-container">
+            <h2>Courier Log in</h2>
+            <form id="loginForm">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" required />
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required />
+
+                <button type="submit" class="login-link-button">Log in</button>
+            </form>
+            <div id="loginMessage" style="color:red; margin-top: 10px;"></div>
+        </div>
+    </div>
+    <script src="../js/courier.js"></script>
+</body>
+
+</html>

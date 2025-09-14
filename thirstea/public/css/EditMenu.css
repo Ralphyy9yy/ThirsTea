@@ -1,0 +1,128 @@
+/* Reset and base styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f8;
+    color: #333;
+}
+
+header {
+    background-color: #004d40;
+    padding: 18px 0;
+    text-align: center;
+}
+
+header .logo {
+    height: 54px;
+    user-select: none;
+}
+
+.add-menu-container {
+    max-width: 480px;
+    margin: 40px auto;
+    padding: 32px 30px 24px 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+}
+
+.add-menu-container h1 {
+    text-align: center;
+    color: #004d40;
+    margin-bottom: 24px;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 7px;
+    color: #00796b;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select,
+.form-group input[type="file"] {
+    padding: 10px 12px;
+    border: 1.5px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    background: #fafafa;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus,
+.form-group select:focus {
+    border-color: #00796b;
+    outline: none;
+}
+
+.form-group select {
+    background-color: #fafafa;
+}
+
+#currentImageContainer img {
+    max-width: 140px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 4px;
+}
+
+
+/* Buttons */
+
+button[type="submit"],
+#cancelBtn {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    margin-bottom: 3px;
+    transition: background 0.2s, color 0.2s;
+}
+
+button[type="submit"] {
+    background: #00796b;
+    color: #fff;
+    margin-right: 8px;
+}
+
+button[type="submit"]:hover {
+    background: #004d40;
+}
+
+#cancelBtn {
+    background: #e0e0e0;
+    color: #333;
+}
+
+#cancelBtn:hover {
+    background: #bdbdbd;
+    color: #222;
+}
+
+
+/* Responsive */
+
+@media (max-width: 600px) {
+    .add-menu-container {
+        margin: 18px 8px;
+        padding: 18px 8px;
+    }
+}

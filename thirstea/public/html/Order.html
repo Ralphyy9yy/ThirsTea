@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Order Management</title>
+  <link rel="stylesheet" href="../css/Order.css" />
+</head>
+
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar" role="navigation" aria-label="Main Sidebar Navigation">
+      <img src="../images/Tlogo.png" alt="ThirsTea Logo" class="logo" />
+      <nav class="menu" role="menu">
+        <ul>
+          <li><a href="../html/Dashboard.html" role="menuitem">Dashboard</a></li>
+          <li class="active"><a href="../html/Order.html" role="menuitem" aria-current="page">Orders</a></li>
+          <li><a href="../html/User.html" role="menuitem">Couriers</a></li>
+          <li> <a href = "../html/customer.html">Customers</a></li>
+          <li><a href="../html/Menu.html" role="menuitem">Menu</a></li>
+          <li><a href="../html/Messages.html" role="menuitem">Messages</a></li>
+          <li><a href="../html/Transactions.html">Transaction History</a></li>
+          <li><a href="../html/1st.html" role="menuitem">Log Out</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" role="main" aria-label="Order Management Section">
+      <h1>Order Management</h1>
+      <p>Manage and view all orders here</p>
+
+      <section class="recent-orders" aria-labelledby="recent-orders-heading">
+        <h2 id="recent-orders-heading">Recent Orders</h2>
+
+        <!-- Optional: Loading indicator -->
+        <div id="loading-message" aria-live="polite" style="display:none;">Loading orders...</div>
+
+        <table role="table" aria-describedby="orders-description">
+          <caption id="orders-description" class="sr-only">List of recent orders with details</caption>
+          <thead>
+            <tr>
+              <th scope="col">Order ID</th>
+              <th scope="col">Customer</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Date</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody id="orders-tbody">
+            <!-- Orders will be dynamically loaded here -->
+            <tr>
+              <td colspan="5" style="text-align:center;">No orders to display.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Optional: Pagination controls -->
+        <!--
+        <nav aria-label="Order pagination">
+          <button id="prev-page" disabled>Previous</button>
+          <span id="page-info">Page 1</span>
+          <button id="next-page">Next</button>
+        </nav>
+        -->
+      </section>
+    </main>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="../js/order.js"></script>
+</body>
+
+</html>

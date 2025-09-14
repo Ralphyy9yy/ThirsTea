@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Track Orders</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 1rem;
+      background: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #28a745;
+    }
+    form {
+      max-width: 400px;
+      margin: 1rem auto;
+      background: white;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    .status-container {
+      max-width: 600px;
+      margin: 1rem auto;
+      background: white;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .status-container p {
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+    }
+    .error {
+      color: red;
+      text-align: center;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Track Your Order</h1>
+
+  <form id="trackForm" aria-label="Track order form">
+    <label for="orderIdInput">Enter your Order ID:</label>
+    <input type="text" id="orderIdInput" name="orderId" required aria-required="true" placeholder="e.g. 12345" />
+    <button type="submit">Track Order</button>
+  </form>
+
+  <div class="status-container" id="statusContainer" aria-live="polite" aria-atomic="true" style="display:none;"></div>
+  <div class="error" id="errorMessage" role="alert" style="display:none;"></div>
+
+  <script>
+    const form = document.getElementById('trackForm');
+    const statusContainer = document.getElementById('statusContainer');
+    const errorMessage = document.getElementById('errorMessage');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      statusContainer.style.display = 'none';
+      errorMessage.style.display = 'none';
+
+      const orderId = document.getElementById('orderIdInput').value.trim();
+      if (!orderId) {
+        errorMessage.textContent = 'Please enter a valid Order ID.';
+        errorMessage.style.display = 'block';
+        return;
+      }
+
+      try {
+        // Replace with your actual API endpoint for tracking orders
+        const response = await fetch(`http://localhost:3000/thirstea/backend/track_order.php?orderId=${encodeURIComponent(orderId)}`);
+        if (!response.ok) throw new Error('Network response was not ok');
+
+        const data = await response.json();
+
+        if (!data.success) {
+          errorMessage.textContent = data.message || 'Order not found.';
+          errorMessage.style.display = 'block';
+          return;
+        }
+
+        // Example: data.orderStatus, data.estimatedDelivery, data.history (array)
+        const order = data.order;
+        statusContainer.innerHTML = `
+          <p><strong>Order ID:</strong> ${orderId}</p>
+          <p><strong>Status:</strong> ${order.status}</p>
+          <p><strong>Estimated Delivery:</strong> ${order.estimatedDelivery || 'N/A'}</p>
+          ${order.history && order.history.length ? `
+            <h3>History:</h3>
+            <ul>
+              ${order.history.map(h => `<li>${h.date}: ${h.status}</li>`).join('')}
+            </ul>
+          ` : ''}
+        `;
+        statusContainer.style.display = 'block';
+      } catch (error) {
+        errorMessage.textContent = 'Error fetching order status. Please try again later.';
+        errorMessage.style.display = 'block';
+        console.error('Error tracking order:', error);
+      }
+    });
+  </script>
+</body>
+</html>

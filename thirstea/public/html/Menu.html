@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Menu Management</title>
+    <link rel="stylesheet" href="../css/Menu.css" />
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <img src="../images/Tlogo.png" alt="Logo" class="logo" />
+            <nav class="menu">
+                <ul>
+                    <li><a href="Dashboard.html">Dashboard</a></li>
+                    <li><a href="Order.html">Orders</a></li>
+                    <li><a href="../html/User.html">Couriers</a></li>
+                    <li> <a href="../html/customer.html">Customers</a></li>
+                    <li class="active"><a href="#">Menu</a></li>
+                    <li><a href="../html/Messages.html">Messages</a></li>
+                    <li><a href="../html/Transactions.html">Transaction History</a></li>
+                    <li><a href="../html/1st.html">Log Out</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Section -->
+            <div class="menu-header">
+                <h1>Menu Management</h1>
+                <a href="../html/AddMenu.html" class="add-menu-btn">+ Add a Menu</a>
+            </div>
+            <p>Manage the menu items currently available to customers.</p>
+
+            <!-- Menu items will be displayed here dynamically -->
+            <div class="user-management-content" id="menu-items-container">
+            </div>
+        </main>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../js/menu.js"></script>
+</body>
+
+</html>

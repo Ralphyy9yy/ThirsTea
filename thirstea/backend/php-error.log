@@ -1,0 +1,65 @@
+[01-May-2025 02:02:32 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'thirstea.customers' doesn't exist in C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php:40
+Stack trace:
+#0 C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php(40): mysqli->prepare('SELECT o.OrderI...')
+#1 {main}
+  thrown in C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php on line 40
+[01-May-2025 02:04:18 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'thirstea.customers' doesn't exist in C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php:40
+Stack trace:
+#0 C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php(40): mysqli->prepare('SELECT o.OrderI...')
+#1 {main}
+  thrown in C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php on line 40
+[01-May-2025 02:04:19 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'thirstea.customers' doesn't exist in C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php:40
+Stack trace:
+#0 C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php(40): mysqli->prepare('SELECT o.OrderI...')
+#1 {main}
+  thrown in C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php on line 40
+[01-May-2025 02:04:19 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'thirstea.customers' doesn't exist in C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php:40
+Stack trace:
+#0 C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php(40): mysqli->prepare('SELECT o.OrderI...')
+#1 {main}
+  thrown in C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php on line 40
+[01-May-2025 02:04:19 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'thirstea.customers' doesn't exist in C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php:40
+Stack trace:
+#0 C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php(40): mysqli->prepare('SELECT o.OrderI...')
+#1 {main}
+  thrown in C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php on line 40
+[01-May-2025 02:04:19 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'thirstea.customers' doesn't exist in C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php:40
+Stack trace:
+#0 C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php(40): mysqli->prepare('SELECT o.OrderI...')
+#1 {main}
+  thrown in C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php on line 40
+[01-May-2025 02:04:52 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'thirstea.customers' doesn't exist in C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php:39
+Stack trace:
+#0 C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php(39): mysqli->prepare('SELECT o.OrderI...')
+#1 {main}
+  thrown in C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php on line 39
+[01-May-2025 02:04:53 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'thirstea.customers' doesn't exist in C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php:39
+Stack trace:
+#0 C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php(39): mysqli->prepare('SELECT o.OrderI...')
+#1 {main}
+  thrown in C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php on line 39
+[01-May-2025 02:04:53 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'thirstea.customers' doesn't exist in C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php:39
+Stack trace:
+#0 C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php(39): mysqli->prepare('SELECT o.OrderI...')
+#1 {main}
+  thrown in C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php on line 39
+[01-May-2025 02:04:53 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'thirstea.customers' doesn't exist in C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php:39
+Stack trace:
+#0 C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php(39): mysqli->prepare('SELECT o.OrderI...')
+#1 {main}
+  thrown in C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php on line 39
+[01-May-2025 02:04:53 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'thirstea.customers' doesn't exist in C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php:39
+Stack trace:
+#0 C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php(39): mysqli->prepare('SELECT o.OrderI...')
+#1 {main}
+  thrown in C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php on line 39
+[01-May-2025 02:04:53 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'thirstea.customers' doesn't exist in C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php:39
+Stack trace:
+#0 C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php(39): mysqli->prepare('SELECT o.OrderI...')
+#1 {main}
+  thrown in C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php on line 39
+[01-May-2025 02:04:53 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'thirstea.customers' doesn't exist in C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php:39
+Stack trace:
+#0 C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php(39): mysqli->prepare('SELECT o.OrderI...')
+#1 {main}
+  thrown in C:\Users\Ralph Giann Suquib\Downloads\thirstea-f\thirstea\thirstea\backend\get_assigned_orders.php on line 39

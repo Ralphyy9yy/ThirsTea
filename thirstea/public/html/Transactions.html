@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Transaction History</title>
+  <link rel="stylesheet" href="../css/Order.css" />
+</head>
+
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar" role="navigation" aria-label="Main Sidebar Navigation">
+      <img src="../images/Tlogo.png" alt="ThirsTea Logo" class="logo" />
+      <nav class="menu" role="menu">
+        <ul>
+          <li><a href="../html/Dashboard.html" role="menuitem">Dashboard</a></li>
+          <li><a href="../html/Order.html" role="menuitem">Orders</a></li>
+          <li><a href="../html/User.html" role="menuitem">Couriers</a></li>
+          <li><a href="../html/customer.html">Customers</a></li>
+          <li><a href="../html/Menu.html" role="menuitem">Menu</a></li>
+          <li><a href="../html/Messages.html" role="menuitem">Messages</a></li>
+          <li class="active"><a href="../html/Transactions.html" role="menuitem" aria-current="page">Transaction History</a></li>
+          <li><a href="../html/1st.html" role="menuitem">Log Out</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" role="main" aria-label="Transaction History Section">
+      <h1>Transaction History</h1>
+      <p>View all transaction records for transparency and accountability</p>
+
+      <section class="transaction-records" aria-labelledby="transaction-records-heading">
+        <h2 id="transaction-records-heading">All Transactions</h2>
+
+        <!-- Optional: Loading indicator -->
+        <div id="loading-message" aria-live="polite" style="display:none;">Loading transactions...</div>
+
+        <table role="table" aria-describedby="transactions-description">
+          <caption id="transactions-description" class="sr-only">List of all transactions with details</caption>
+          <thead>
+            <tr>
+              <th scope="col">Transaction ID</th>
+              <th scope="col">Order ID</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Payment Method</th>
+              <th scope="col">Timestamp</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody id="transactions-tbody">
+            <tr>
+              <td colspan="6" style="text-align:center;">No transactions to display.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="../js/transactions.js"></script>
+</body>
+
+</html>
